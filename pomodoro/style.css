@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  padding: 15px;
+
+  margin-right: auto;
+  margin-left: auto;
+}
+
+div {
+  display: block;
+}
+
+h1 {
+  text-align: center;
+}
+
+#pomodoro {
+  margin-top: 10%;
+  border: 2px solid green;
+  max-width: 500px;
+  padding: 10px;
+}
+
+h1 {
+  margin-top: 20px;
+}
+.top {
+  background-color: grey;
+  border: 2px solid blue;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.menu {
+  display: inline-block;
+  border: 2px solid black;
+  width: 40%;
+}
+
+.clock {
+  text-align: center;
+  background-color: grey;
+  padding: 20px;
+  border: 2px solid red;
+}
+
+#timer {
+  border: 2px solid black;
+  font-size: 30px;
+}
+
+.buttons {
+  padding: 0px;
+  list-style: none;
+  text-align: center;
+}
+
+ul > li {
+  display: inline-block;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  overflow: auto;
+  z-index: 1;
+}
+.dropdown-content a {
+  display: block;
+}
+.show {
+  display: block;
+}
