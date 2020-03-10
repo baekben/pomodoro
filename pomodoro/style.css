@@ -61,19 +61,43 @@ ul > li {
   display: inline-block;
 }
 
-.dropdown {
+.dropbtn {
+  padding: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.session {
+  overflow: auto;
   position: relative;
   display: inline-block;
 }
 
-.dropdown-content {
+#dropdown1 {
+  min-height: 40px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  width: 10px;
+}
+
+#dropdown2 {
+  min-height: 40px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  width: 10px;
+}
+
+.drop-content {
   display: none;
   position: absolute;
   min-width: 160px;
   overflow: auto;
   z-index: 1;
+  text-align: center;
 }
-.dropdown-content a {
+.drop-content a {
   display: block;
 }
 .show {

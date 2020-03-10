@@ -10,19 +10,7 @@
     <div class="container">
       <div id="pomodoro" class="container">
         <h1>Pomodoro Timer</h1>
-        <div class="top">
-          <div id="session" class="menu">
-            Session
-            <button onclick="menuLength(25, 'session')" class="dropbtn">
-              25
-            </button>
-            <div id="dropdown" class="drop-content"></div>
-          </div>
-          <div id="breaks" class="menu">
-            Breaks
-            <div>"Amount of breaks"</div>
-          </div>
-        </div>
+        
         <div class="clock">
           <div id="timer">25:00</div>
           <ul class="buttons">
@@ -32,6 +20,20 @@
 
             <li><button id="reset" onclick="reset()">Reset</button></li>
           </ul>
+        </div>
+        <div class="top">
+          <div id="session" class="menu">
+            Session</br>
+            <button onclick="menuLength(25,'dropdown1')" class="dropbtn">
+              25
+            </button>
+            <select id="dropdown1" size="5" class="drop-content" ></select>
+          </div>
+          <div id="breaks" class="menu">
+            Breaks</br>
+            <button onclick='menuLength(5,"dropdown2")' class="dropbtn">5</button>
+            <select id="dropdown2" size="5" class="drop-content"></select>
+          </div>
         </div>
       </div>
     </div>

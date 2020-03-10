@@ -19,26 +19,28 @@ function remainingTime(end) {
 function menuLength(length, id) {
   //create list of number from 1-25 for sessions
   // 1-5 for breaks
-  var menu = document.getElementById('dropdown');
+  var menu = document.getElementById(`${id}`);
   for (let i = 0; i < length; i++) {
-    var item = document.createElement('a');
+    var item = document.createElement('option');
     item.setAttribute('value', `${i + 1}`);
     var option = document.createTextNode(`${i + 1}`);
     item.appendChild(option);
     menu.appendChild(item);
   }
   document.getElementById(`${id}`).classList.toggle('show');
+
   //hide the list
   //show list if clicked
 }
 
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName('dropdown-content');
+    var dropdowns = document.getElementsByClassName('drop-content');
     for (let i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];
       if (openDropdown.classList.contains('show')) {
         openDropdown.classList.remove('show');
+        this.menu.innerHTML = '';
       }
     }
   }
