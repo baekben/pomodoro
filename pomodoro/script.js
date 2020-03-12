@@ -1,13 +1,14 @@
 const timer = document.getElementById('timer');
 const resume = document.getElementById('start');
-// starting time length will be 25 minutes
-var countLength = 25;
+// starting time length will be default at 25
+var countLength = 25; //time can be changed
 var startTime;
 var endTime;
 
 var pause = false;
 var timeInterval;
 var timeLeft;
+var menu;
 
 function remainingTime(end) {
   var time = Date.parse(end) - Date.parse(new Date());
@@ -19,28 +20,38 @@ function remainingTime(end) {
 function menuLength(length, id) {
   //create list of number from 1-25 for sessions
   // 1-5 for breaks
-  var menu = document.getElementById(`${id}`);
+  if (id == 'dropdown1') {
+    countLength = length;
+  }
+  menu = document.getElementById(`${id}`);
   for (let i = 0; i < length; i++) {
     var item = document.createElement('option');
     item.setAttribute('value', `${i + 1}`);
+    item.setAttribute('id', 'number');
     var option = document.createTextNode(`${i + 1}`);
     item.appendChild(option);
     menu.appendChild(item);
   }
   document.getElementById(`${id}`).classList.toggle('show');
-
-  //hide the list
-  //show list if clicked
 }
 
+//closes out of options if clicked anywhere besides options
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
     var dropdowns = document.getElementsByClassName('drop-content');
     for (let i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];
       if (openDropdown.classList.contains('show')) {
+        if (event.target.matches('#number')) {
+          //choosing new minutes
+          var select = document.getElementById('dropdown1');
+          this.countLength = select[select.selectedIndex].value;
+          this.countLength =
+            this.countLength < 10 ? '0' + this.countLength : this.countLength;
+          timer.innerHTML = `${this.countLength}:00`;
+        }
         openDropdown.classList.remove('show');
-        this.menu.innerHTML = '';
+        menu.innerHTML = ''; //deletes menu
       }
     }
   }
@@ -78,7 +89,14 @@ function runTimer() {
   timer.innerHTML = `${minutes}:${seconds}`;
   if (time.totalTime <= 0) {
     clearInterval(timeInterval);
+    //run break
   }
+}
+
+function breakTime() {
+  //have a counter for tracking breaks
+  //5 minute breaks
+  //if 4 breaks have occured then 5th break == 30 min
 }
 
 function reset() {
