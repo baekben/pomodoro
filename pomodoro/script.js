@@ -104,6 +104,12 @@ function runTimer() {
   }
 }
 
+function breakTime() {
+  //have a counter for tracking breaks
+  //5 minute breaks
+  //if 4 breaks have occured then 5th break == 30 min
+}
+
 function reset() {
   pause = false;
   timeLeft = 0;
