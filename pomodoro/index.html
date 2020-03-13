@@ -20,18 +20,19 @@
 
             <li><button id="reset" onclick="reset()">Reset</button></li>
           </ul>
+          <div id ='status'>Working</div>
         </div>
         <div class="top">
           <div id="session" class="menu">
             Session</br>
-            <button onclick="menuLength(25,'dropdown1')" class="dropbtn">
+            <button onclick="menuLength(25,'dropdown1')" id="minutes" class="dropbtn">
               25
             </button>
             <select id="dropdown1" size="5" class="drop-content" ></select>
           </div>
           <div id="breaks" class="menu">
             Breaks</br>
-            <button onclick='menuLength(5,"dropdown2")' class="dropbtn">5</button>
+            <button onclick='menuLength(5,"dropdown2")' id ='break' class="dropbtn">5</button>
             <select id="dropdown2" size="5" class="drop-content"></select>
           </div>
         </div>
