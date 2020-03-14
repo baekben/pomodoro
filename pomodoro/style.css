@@ -14,47 +14,57 @@ div {
 
 h1 {
   text-align: center;
+  color: white;
 }
 
 #pomodoro {
   margin-top: 10%;
-  border: 2px solid green;
-  max-width: 500px;
-  padding: 10px;
+  max-width: 700px;
+  padding: 25px;
+  background-color: #d63447;
+  border: 2px solid #d63447;
+  border-radius: 100px;
 }
 
 h1 {
   margin-top: 20px;
 }
 .top {
-  background-color: grey;
-  border: 2px solid blue;
   padding: 20px;
   text-align: center;
   margin-bottom: 15px;
 }
 .menu {
+  font-size: 25px;
   display: inline-block;
-  border: 2px solid black;
   width: 40%;
+}
+
+#status {
+  font-size: 30px;
 }
 
 .clock {
   text-align: center;
-  background-color: grey;
+  background-color: #d1cebd;
   padding: 20px;
-  border: 2px solid red;
 }
 
 #timer {
-  border: 2px solid black;
-  font-size: 30px;
+  font-size: 75px;
 }
 
 .buttons {
-  padding: 0px;
+  padding: 12px;
   list-style: none;
   text-align: center;
+}
+
+button {
+  font-size: 20px;
+  background-color: #f57b51;
+  border: #f57b51;
+  border-radius: 3px;
 }
 
 ul > li {
