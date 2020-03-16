@@ -1,3 +1,4 @@
 # Pomodoro Clock
 
-In Progress
+Link to clock:
+https://baekben.github.io/pomodoro/

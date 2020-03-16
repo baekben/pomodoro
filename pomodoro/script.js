@@ -65,7 +65,6 @@ window.onclick = function(event) {
     var minutes = this.document.getElementById('minutes');
     minutes.innerHTML = `${this.countLength}`;
   }
-
   if (!event.target.matches('.dropbtn')) {
     var dropdowns = document.getElementsByClassName('drop-content');
     for (let i = 0; i < dropdowns.length; i++) {
@@ -102,6 +101,7 @@ function stopTimer() {
   timeLeft = remainingTime(endTime).totalTime;
   console.log('Timer stopped ...');
 }
+
 function runTimer() {
   var time = remainingTime(endTime);
   let minutes = time.minutes;
@@ -113,7 +113,6 @@ function runTimer() {
     clearInterval(timeInterval);
     stopTimer();
     breakTime();
-    //run break
   }
 }
 
