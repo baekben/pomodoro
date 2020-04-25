@@ -153,8 +153,4 @@ function breakTime() {
     countLength = sessionTime;
   }
   timer.innerHTML = `${countLength}:00`;
-
-  //have a counter for tracking breaks
-  //5 minute breaks
-  //if 4 breaks have occured then 5th break == 30 min
 }
